@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "obs_owncast_chat_integration"
+version = "0.1.0"
+description = ""
+authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+Flask = "^2.0.1"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.27.0"
+black = "^21.9b0"
+flake8 = "^3.9.2"
+pylint = "^2.11.1"
+neovim = "^0.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
