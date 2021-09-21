@@ -4,7 +4,7 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-file_to_write_to = '/home/j/obs_stuffs/chatlog.txt'
+FILE_TO_WRITE_TO = '/home/j/obs_stuffs/chatlog.txt'
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -21,7 +21,7 @@ def webhook():
         abort(400)
 
 def write_out_chatlog(timestamp, user, message):
-    with open(file_to_write_to, mode='a') as chatlog:
+    with open(FILE_TO_WRITE_TO, mode='a') as chatlog:
         chatlog.write(f"{timestamp} {user}: {message}\n")
 
 
