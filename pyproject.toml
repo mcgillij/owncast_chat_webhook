@@ -8,6 +8,7 @@ authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
 python = "^3.9"
 requests = "^2.26.0"
 Flask = "^2.0.1"
+python-dateutil = "^2.8.2"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.27.0"
