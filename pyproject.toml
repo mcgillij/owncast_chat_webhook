@@ -11,7 +11,7 @@ Flask = "^2.0.1"
 python-dateutil = "^2.8.2"
 
 [tool.poetry.dev-dependencies]
-ipython = "^7.27.0"
+ipython = "^7.31.1"
 black = "^21.9b0"
 flake8 = "^3.9.2"
 pylint = "^2.11.1"
