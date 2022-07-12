@@ -15,7 +15,7 @@ data = {'eventData': {'body': 'test message without TTS',
                'visible': True},
          'type': 'CHAT'}
 
-data_tts = {'eventData': {'body': 'TTS: test message',
+data_tts = {'eventData': {'body': '!tts test message',
                'id': 'MHLpo7Hng',
                'rawBody': 'f',
                'timestamp': '2021-09-20T23:02:54.980066719Z',

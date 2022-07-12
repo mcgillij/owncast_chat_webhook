@@ -23,8 +23,8 @@ def webhook():
 
 
 def check_for_tts(message):
-    if message.startswith("TTS:"):
-        speak = message.split('TTS:')[1]
+    if message.startswith("!tts "):
+        speak = message.split('!tts ')[1]
         os.system(f'echo "{speak}" | festival --tts')
 
 
