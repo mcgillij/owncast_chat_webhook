@@ -2,7 +2,6 @@ import os
 from datetime import datetime
 from dateutil import parser
 from flask import Flask, request, abort
-from subprocess import PIPE, Popen
 
 app = Flask(__name__)
 
@@ -11,9 +10,9 @@ FILE_TO_WRITE_TO = '/home/j/obs_stuffs/chatlog.txt'
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        message = request.json.get('eventData').get('body')
-        user = request.json.get('eventData').get('user').get('displayName')
-        timestamp = request.json.get('eventData').get('timestamp')
+        message = request.json['eventData'].get('body')
+        user = request.json['eventData'].get('user').get('displayName')
+        timestamp = request.json['eventData'].get('timestamp')
         formatted = datetime.strftime(parser.isoparse(timestamp), '%H:%M:%S')
 
         if user and message and timestamp:
